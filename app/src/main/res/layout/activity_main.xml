@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="输入位置" />
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numeric="integer"
+
+            />
+
+        <Button
+            android:id="@+id/scroll_to_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOnClick"
+            android:text="切到指定item" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="输入偏移量" />
+
+        <EditText
+            android:id="@+id/edit_offset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned|numberDecimal"
+            />
+
+        <Button
+            android:id="@+id/scroll_to_offset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOnClickOffset"
+            android:text="移动偏移量" />
+    </LinearLayout>
+
+    <com.zhiqing.recyclerview_lib.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="3dp" />
+
+</LinearLayout>
